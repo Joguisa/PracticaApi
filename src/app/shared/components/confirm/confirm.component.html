@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="header">
+      <p mat-dialog-title>{{ data.title }}</p>
+    </div>
+  
+    <div class="icon">
+      <i class="material-icons">warning_amber</i>
+    </div>
+  
+    <div mat-dialog-content>
+      <p>{{ data.message }} {{ data.datos }}</p>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true">
+      {{ data.confirmText }}
+    </button>
+    <button mat-raised-button color="warn" [mat-dialog-close]="false">
+      {{ data.cancelText }}
+    </button>
+  </div>

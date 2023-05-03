@@ -1,0 +1,23 @@
+<div class="titulo">
+    <h2>Lista de perfiles</h2>
+  </div>
+  
+  <mat-card style="margin: 20px 40px 40px 40px">
+    <mat-card-title>
+      <button mat-raised-button color="primary" (click)="agregarPerfil()">
+          <mat-icon mat-list-icon>add</mat-icon>Nuevo Perfil
+      </button>
+  </mat-card-title>
+    <mat-divider></mat-divider>
+
+    <mat-card-content class="dashboard-card-content">
+    <div class="mat-elevation-z2" style="overflow-x: auto">
+        <app-datatable
+          [data]="dataListPerfil.data"
+          [columns]="tableColumns"
+          [config]="tableConfig"
+          (action)="onTableAction($event)"
+        ></app-datatable>
+      </div>
+    </mat-card-content>
+  </mat-card>
